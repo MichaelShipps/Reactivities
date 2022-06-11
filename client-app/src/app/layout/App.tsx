@@ -60,6 +60,7 @@ function App() {
     } else {
       activity.id = uuid();
       agent.Activities.create(activity).then(() => {
+        setActivities([...activities, activity]);
         setSelectedActivity(activity);
         setEditMode(false);
         setSubmitting(false);
@@ -72,6 +73,7 @@ function App() {
     agent.Activities.delete(id).then(() => {
       setActivities([...activities.filter((x) => x.id !== id)]);
       setSubmitting(false);
+      setSelectedActivity(undefined);
     });
   }
 
