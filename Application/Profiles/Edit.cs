@@ -46,7 +46,7 @@ namespace Application.Profiles
                 user.Bio = request.Bio ?? user.Bio;
                 user.DisplayName = request.DisplayName ?? user.DisplayName;
 
-                _context.Entry(user).State = EntityState.Modified;
+                _context.Entry(user).State = EntityState.Modified; // avoids a 400 bad request when sending up no changes
 
                 var success = await _context.SaveChangesAsync() > 0;
 

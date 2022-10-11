@@ -29,6 +29,7 @@ namespace Infrastructure.Photos
         {
             if (file.Length > 0)
             {
+                // using keyword disposes of the stream after we are done with it
                 await using var stream = file.OpenReadStream();
                 var uploadParams = new ImageUploadParams
                 {

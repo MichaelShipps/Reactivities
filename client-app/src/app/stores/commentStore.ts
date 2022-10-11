@@ -9,7 +9,7 @@ export default class CommentStore {
 
     constructor() {
         makeAutoObservable(this);
-    }
+    } 
 
     createHubConnection = (activityId: string) => {
         if (store.activityStore.selectedActivity) {
