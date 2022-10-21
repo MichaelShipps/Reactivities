@@ -64,7 +64,8 @@ namespace API
                 .BlockAllMixedContent()
                 .StyleSources(s => s.Self().CustomSources(
                     "https://fonts.googleapis.com",
-                    "https://cdn.jsdelivr.net/npm/semantic-ui@2/"
+                    "https://cdn.jsdelivr.net/npm/semantic-ui@2/",
+                    "sha256-DpOoqibK/BsYhobWHnU38Pyzt5SjDZuR/mFsAiVN7kk="
                 ))
                 .FontSources(s => s.Self().CustomSources(
                     "https://fonts.gstatic.com",
@@ -80,7 +81,8 @@ namespace API
                 ))
                 .ScriptSources(s => s.Self()
                     .CustomSources(
-                        "https://connect.facebook.net"
+                        "https://connect.facebook.net",
+                        "sha256-+2bTXPIHKFiUvk0R2g63bUws3KhvgFlIzI779FYWWDI="
                 ))
             );
 
