@@ -62,12 +62,26 @@ namespace API
             app.UseXfo(opt => opt.Deny());
             app.UseCsp(opt => opt
                 .BlockAllMixedContent()
-                .StyleSources(s => s.Self().CustomSources("https://fonts.googleapis.com", "https://cdn.jsdelivr.net/npm/semantic-ui@2/"))
-                .FontSources(s => s.Self().CustomSources("https://fonts.gstatic.com", "data:", "https://cdn.jsdelivr.net/npm/semantic-ui@2/"))
+                .StyleSources(s => s.Self().CustomSources(
+                    "https://fonts.googleapis.com",
+                    "https://cdn.jsdelivr.net/npm/semantic-ui@2/"
+                ))
+                .FontSources(s => s.Self().CustomSources(
+                    "https://fonts.gstatic.com",
+                    "data:",
+                    "https://cdn.jsdelivr.net/npm/semantic-ui@2/"
+                ))
                 .FormActions(s => s.Self())
                 .FrameAncestors(s => s.Self())
-                .ImageSources(s => s.Self().CustomSources("https://res.cloudinary.com", "blob:"))
-                .ScriptSources(s => s.Self())
+                .ImageSources(s => s.Self().CustomSources(
+                    "https://res.cloudinary.com",
+                    "blob:",
+                    "https://www/facebook.com"
+                ))
+                .ScriptSources(s => s.Self()
+                    .CustomSources(
+                        "https://connect.facebook.net"
+                ))
             );
 
             if (env.IsDevelopment())
