@@ -71,16 +71,14 @@ namespace API
                 ))
                 .FontSources(s => s.Self().CustomSources(
                     "https://fonts.gstatic.com",
-                    "data:;",
                     "https://cdn.jsdelivr.net/npm/semantic-ui@2/"
                 ))
                 .FormActions(s => s.Self())
                 .FrameAncestors(s => s.Self())
                 .ImageSources(s => s.Self().CustomSources(
                     "https://res.cloudinary.com",
-                    "blob:;",
-                    "data:;",
-                    "https://www/facebook.com"
+                    "https://www/facebook.com",
+                    "https://platform-lookaside.fbsbx.com"
                 ))
                 .ScriptSources(s => s.Self()
                     .CustomSources(
